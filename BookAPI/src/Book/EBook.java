@@ -1,14 +1,12 @@
 package Book;
 
 public class EBook extends Book{
-	private String[] supperDevices;
+	private String[] supperDevices = {"안드로이드","아이폰","태블릿"};
 	
-	public EBook(String Title, String author,String publlisher, int price, String[] supperDevices) {
-		super(Title,author,publlisher, price);
-		this.supperDevices = supperDevices;
-	}
-	
-   
+	public EBook(String title, String author, String publisher, int price, String[] supperDevices) {
+        super(title, author, publisher, price);
+        this.supperDevices = supperDevices;
+    }
 
     public String[] getSupperDevices() {
         return supperDevices;
@@ -24,6 +22,11 @@ public class EBook extends Book{
         for (String device : supperDevices) {
             deviceList += device + ", ";
         }
-        return super.toString() + "\n**호환 기기:** " + deviceList.substring(0, deviceList.length() - 2);
+
+        if (deviceList.length() > 0) {
+            deviceList = deviceList.substring(0, deviceList.length() - 2);
+        }
+
+        return super.toString() + "\n**호환 기기:** " + deviceList;
     }
 }

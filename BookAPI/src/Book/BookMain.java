@@ -46,8 +46,8 @@ public class BookMain {
 
 	 // 도서 추가
 	 private static void addBook() {
-		 System.out.println("1. 종이책 등록");
-	        System.out.println("2. 전자책 등록");
+		 System.out.println("1. 종이책 등록 | 2. 전자책 등록");
+	     System.out.print(">>");
 
 	        int choice = scanner.nextInt();
 	        scanner.nextLine();
@@ -79,19 +79,20 @@ public class BookMain {
 	        books.add(new PaperBook(title, author,  publisher,price, size));
 	        System.out.println("도서가 등록되었습니다.");
 	 }
-	 private static void addEBook() {
+	 public static void addEBook() {
+		
 		 System.out.print("도서 제목: ");
 	        String title = scanner.nextLine();
 	        System.out.print("저자: ");
 	        String author = scanner.nextLine();
 	        System.out.print("출판사: ");
+	        String publisher = scanner.nextLine();
 	        System.out.print("가격: ");
 	        int price = scanner.nextInt();
-	        String publisher = scanner.nextLine();
 	        System.out.print("호환 기기 (쉼표로 구분): ");
 	        String[] devices = scanner.nextLine().split(",");
 
-	        books.add(new EBook(title, author,  publisher,price,  devices));
+	        books.add(new EBook(title, author, publisher, price, devices));
 	        System.out.println("도서가 등록되었습니다.");
 	 }
 	 //도서 삭제

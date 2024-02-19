@@ -8,10 +8,7 @@ public class Book {
 	private String publisher;
 	private final float tax = 1.1f;
 
-	
-	public Book() {
-		
-	}
+
 	public Book(String Title, String author,String publlisher, int price) {
 		this.Title = Title;
 		this.author = author;
@@ -51,7 +48,6 @@ public class Book {
 	        return String.format("책 제목 : %s | 저자 : %s | 출판사: %s | 가격 :  %d원 ", Title, author, publisher, price);
 	    }
 	public String deviceInfo() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 	
