@@ -74,9 +74,10 @@ public class BookMain {
 	        System.out.print("가격: ");
 	        int price = scanner.nextInt();
 	        System.out.print("페이지 수: ");
-	        int size = scanner.nextInt();
+	        int sizeInfo = scanner.nextInt();
+	        
 
-	        books.add(new PaperBook(title, author,  publisher,price, size));
+	        books.add(new PaperBook(title, author,  publisher,price, sizeInfo));
 	        System.out.println("도서가 등록되었습니다.");
 	 }
 	 public static void addEBook() {
