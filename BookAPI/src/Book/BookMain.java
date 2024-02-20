@@ -90,10 +90,8 @@ public class BookMain {
 	        String publisher = scanner.nextLine();
 	        System.out.print("가격: ");
 	        int price = scanner.nextInt();
-	        System.out.print("호환 기기 (쉼표로 구분): ");
-	        String[] devices = scanner.nextLine().split(",");
-
-	        books.add(new EBook(title, author, publisher, price, devices));
+	       
+	        books.add(new EBook(title, author, publisher, price));
 	        System.out.println("도서가 등록되었습니다.");
 	 }
 	 //도서 삭제

@@ -6,7 +6,7 @@ public class Book {
 	private String author;
 	private int price;
 	private String publisher;
-	private final float tax = 1.1f;
+	private float tax = 1.1f;
 
 
 	public Book(String Title, String author,String publlisher, int price) {
@@ -41,7 +41,7 @@ public class Book {
 		this.publisher = publisher;
 	}
 	public float getTax() {
-		return tax;
+		return tax = 1.1f;
 	}
 	@Override
 	    public String toString() {

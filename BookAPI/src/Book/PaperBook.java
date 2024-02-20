@@ -7,7 +7,12 @@ public class PaperBook extends Book{
 		super(Title,author,publlisher, price);
 		this.size = size;
 	}
-
+	public int getSize() {
+		return size;
+	}
+	public void setSize(int size) {
+		this.size = size;
+	}
 	
 	
 
@@ -17,22 +22,10 @@ public class PaperBook extends Book{
     }
 
     public String sizeInfo() {
-        String sizeDescriptor;
-        if (size < 100) {
-            sizeDescriptor = "짧은 (소설, 만화 등)";
-        } else if (size < 300) {
-            sizeDescriptor = "보통 (일반 서적 등)";
-        } else {
-            sizeDescriptor = "긴 (전문 서적, 사전 등)";
-        }
-        return "**책 크기:** " + size + "쪽 (" + sizeDescriptor + ")";
+        
+        return "\n**페이지 수:** " + size + "쪽";
     }
-	 public int getSize() {
-			return size;
-		}
-	 public void setSize(int size) {
-			this.size = size;
-		}
+	 
 
 	 
 }
