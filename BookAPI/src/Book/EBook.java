@@ -2,32 +2,34 @@ package Book;
 
 public class EBook extends Book{
 
-	    private String[] supperDevices = {"안드로이드", "아이폰", "태블릿"};
+	    private String supperDevices;
 
-	    public EBook(String title, String author, String publisher, int price) {
+	    public EBook(String title, String author, String publisher, int price,String supperDevices) {
 	        super(title, author, publisher, price);
-	    }
-
-	    public String[] getSupperDevices() {
-	        return supperDevices;
-	    }
-
-	    public void setSupperDevices(String[] supperDevices) {
 	        this.supperDevices = supperDevices;
+	        
 	    }
 
-	    @Override
-	    public String toString() {
-	        String deviceList = "";
-	        for (String device : supperDevices) {
-	            deviceList += device + ", ";
-	        }
+	  
 
-	        if (deviceList.length() > 0) {
-	            deviceList = deviceList.substring(0, deviceList.length() - 2);
-	        }
+	    public String getSupperDevices() {
+			return supperDevices;
+		}
 
-	        return super.toString() + "\n**호환 기기:** " + deviceList;
+
+
+		public void setSupperDevices(String supperDevices) {
+			this.supperDevices = supperDevices;
+		}
+
+		 @Override
+		 public String toString() {
+		    return super.toString() + "\n**호환 기기:** " + supperDevices;
+		 }
+
+		
+	    public String deviceInfo() {
+	        return  "\n**호환 기기:** " + supperDevices;
 	    }
 	}
 

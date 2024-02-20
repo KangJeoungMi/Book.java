@@ -34,7 +34,7 @@ public class BookMain {
                 case 5:
                 	purchaseBook();
                     break;
-                case 0:
+                case 6:
                     System.out.println("프로그램 종료");
                     return;
                 default:
@@ -90,8 +90,11 @@ public class BookMain {
 	        String publisher = scanner.nextLine();
 	        System.out.print("가격: ");
 	        int price = scanner.nextInt();
+	        scanner.nextLine();
+	        System.out.print("호환기기: ");
+	        String deviceInfo = scanner.nextLine();
 	       
-	        books.add(new EBook(title, author, publisher, price));
+	        books.add(new EBook(title, author, publisher, price, deviceInfo));
 	        System.out.println("도서가 등록되었습니다.");
 	 }
 	 //도서 삭제
